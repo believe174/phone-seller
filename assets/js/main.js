@@ -154,6 +154,63 @@ const products = [
                 discount: '46%'
             },
         ]
+    },
+    {
+        type: 'laptops',
+        headers: {
+            icon: './assets/img/laptop/icon.svg',
+            title: 'LAPTOP ĐÁNG MUA NHẤT',
+            menu: {
+                items: [
+                    'Máy tính apple', 'Macbook cũ 99%'
+                ],
+                more_text: 'Xem tất cả 40 Phụ kiện'
+            }
+        },
+        items: [
+            {
+                name: 'Laptop LG gram 2021 17ZD90P-G.AX71A5 17 inch',
+                image:  './assets/img/laptop/laptop1.webp',
+                sale_price: '28.490.000 đ',
+                price: '44.890.000đ',
+                discount: '37%'
+            },
+            {
+                name: 'Laptop LG gram 2021 16Z90P-G.AH73A5 16 inch',
+                image:  './assets/img/laptop/laptop2.webp',
+                sale_price: '40.600.000 đ',
+                price: '48.890.000đ',
+                discount: '17%'
+            },
+            {
+                name: 'Laptop LG gram 2021 16ZD90P-G.AX54A5 16 inch',
+                image:  './assets/img/laptop/laptop3.webp',
+                price: '39.890.000đ',
+                sale_price: '23.990.000 đ',
+                discount: '40%'
+            },
+            {
+                name: 'Laptop LG gram 2021 17ZD90P-G.AX71A5 17 inch',
+                image:  './assets/img/laptop/laptop1.webp',
+                sale_price: '28.490.000 đ',
+                price: '44.890.000đ',
+                discount: '37%'
+            },
+            {
+                name: 'Laptop LG gram 2021 16Z90P-G.AH73A5 16 inch',
+                image:  './assets/img/laptop/laptop2.webp',
+                sale_price: '40.600.000 đ',
+                price: '48.890.000đ',
+                discount: '17%'
+            },
+            {
+                name: 'Laptop LG gram 2021 16ZD90P-G.AX54A5 16 inch',
+                image:  './assets/img/laptop/laptop3.webp',
+                price: '39.890.000đ',
+                sale_price: '23.990.000 đ',
+                discount: '40%'
+            },
+        ]
     }
 ]
 

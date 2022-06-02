@@ -28,6 +28,7 @@
 }
 
 .sub-content__header .header__menu .list__item {
+    cursor: pointer;
     margin: 0 12px;
 }
 
