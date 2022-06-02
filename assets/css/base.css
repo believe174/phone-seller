@@ -1,0 +1,121 @@
+:root{
+    --primary-color: #171010;
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+    --border-color: #dbdbdb;
+    --button-hover-color: #b4846c;
+    --text-hover-color: #911F27;
+    --facebook-color: #3b5998;
+    --success-color: #28a745;
+    --topic-img-height: 400px;
+    --love-color: #e31b23;
+    --angry-color: #c92929;
+
+    --header-height: 50px;
+}
+
+/* Reset Css */
+*{
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    font-size: 12px;
+}
+
+/* BUTTON */
+.btn{
+    display: inline-block;
+    outline: none;
+    text-decoration: none;
+    border: none; 
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
+/* ANIMATION */
+
+@keyframes growthUp{
+    from {
+        opacity: 0.7;
+        transform: scale(0);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes growthOver {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(2);
+    }
+}
+
+@keyframes slideDown {
+    from{
+        opacity: 0.5;
+        transform: scaleY(0);
+    }
+    to{
+        opacity: 1;
+        transform: scaleY(1);
+    }
+}
+
+@keyframes avt-1 {
+    0% {visibility: visible;}
+    33% {visibility: visible;}
+    66% {visibility: hidden;}
+    100% {visibility: hidden;}
+}
+@keyframes avt-2 {
+    0% {visibility: hidden;}
+    33% {visibility: hidden;}
+    66% {visibility: visible;}
+    100% {visibility: hidden;}
+}
+@keyframes avt-3 {
+    0% {visibility: hidden;}
+    33% {visibility: hidden;}
+    66% {visibility: hidden;}
+    100% {visibility: visible;}
+}
+
+@keyframes slideInLeft{
+    from{
+        opacity: 0;
+        transform: translateX(calc(100% + 32px));
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeOut {
+    to{
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}

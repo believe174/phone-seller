@@ -1,0 +1,86 @@
+/* HEADER */
+#header {
+    width: 100%;
+    height: 60px;
+    background-color: #FF6700;
+}
+
+#header .separate-vertical {
+    width: 1px;
+    background-color: white;
+    height: 24px;
+}
+
+.header__menu .menu__logo {
+    background-image: url('../img/logo.svg');
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 60px;
+}
+
+.header__menu .menu__center {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.header__menu .menu__center .address-pc {
+    background-color: #FFA366;
+    position: relative;
+    border-radius: 3px;
+}
+
+.header__menu .menu__center .search {
+    position: relative;
+}
+
+.header__menu .menu__center .search .search-icon {
+    position: absolute;
+    right: 16px;
+    top: 30%;
+    font-size: 20px;
+    color: #FF6700;
+}
+
+.header__menu .menu__center .search input {
+    height: 47px;
+    width: 245px;
+}  
+
+.header__menu .menu__right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__menu .menu__right a {
+    text-decoration: none;
+    color: white;
+    font-size: 13px;
+}
+
+.header__menu .menu__right a i {
+    font-size: 26px;
+    line-height: 100%;
+    position: relative;
+    top: 6px;
+}
+
+/* SUB HEADER */
+
+#sub-header {
+    background-color: #F9920F;
+    width: 100%;
+    height: 40px;
+    color: white;
+}
+
+.sub-header__item {
+    font-size: 14px;
+    height: 100%;
+}
+
+
+
+
