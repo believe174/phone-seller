@@ -218,10 +218,13 @@ const products = [
 
 $(document).ready(function() {
 
-    products.forEach(product => {
+    let cart = getListProductFromLocalStorage();
+    updateCartQuantity();
+
+    products.forEach((product, index) => {
 
         $('#content').append(`
-            <div class="container sub-content ${product.type}">
+            <div class="container sub-content ${product.type}" index=${index}>
                 <div class="sub-content__header d-flex justify-content-between align-items-center">
                     <div class="header__title d-flex">
                         <div class="icon"
@@ -254,12 +257,12 @@ $(document).ready(function() {
             )
         });
 
-        product.items.forEach(item => {
+        product.items.forEach((item, index) => {
             $(`.sub-content.${product.type} .sub-content__body .row`).append(`
             
                 <div class="col-2">
         
-                    <div class="body__item">
+                    <div class="body__item" index=${index}>
         
                         <div class="img mb-3"
                             style="background-image: url('${item.image}')">
@@ -294,6 +297,96 @@ $(document).ready(function() {
     })
 
 
-    
+    //add item into cart
+    document.querySelectorAll('.body__item').forEach((element) => {
+        element.addEventListener('click',(function() {
+            const productId = element.attributes.index.value;
+            const categoryId = element.parentElement.parentElement.parentElement.parentElement.attributes.index.value;
+
+            tempCart = localStorage.getItem('carts') ? JSON.parse(localStorage.getItem('carts')) : [];
+            if (tempCart.length) {
+                let alreadyAdded = false;
+                for (let i = 0; i < tempCart.length; i++) {
+                    if (tempCart[i].productId == productId && tempCart[i].categoryId == categoryId) {
+                        tempCart[i].quantity += 1;
+                        alreadyAdded = true;
+                    }
+                }
+                if (!alreadyAdded) {
+                    tempCart.push({
+                        productId,
+                        categoryId,
+                        quantity: 1
+                    });
+                }
+            } else {
+                tempCart.push({
+                    productId,
+                    categoryId,
+                    quantity: 1
+                });
+            }
+
+            window.localStorage.setItem('carts', JSON.stringify(tempCart));
+            updateCartQuantity();
+
+        }));
+    })
+
+    //open cart
+    $('.menu-right__item.cart').click(() => {
+        const cartList = getListProductFromLocalStorage();
+        if (cartList.length) {
+            $('#cartModal .modal-body').html('');
+            cartList.forEach(product => {
+                $('#cartModal .modal-body').append(`
+                    <div class="cart-item mb-3 mt-3">
+                        <div class="cart-item__img" style="background-image: url(${product.image})"></div>
+                        <div class="cart-item__name ms-5 me-4">${product.name}</div>
+                        <div class="cart-item__price ms-5 me-4">${product.price}</div>
+                        <div class="cart-item__sale-price ms-5 me-4">${product.sale_price} (${product.discount})</div>
+                        <div class="cart-item__quantity ms-5 me-4">SL: ${product.quantity}</div>
+                        <div class="cart-item__delete-btn btn">
+                            <i class="fa-solid fa-xmark"></i>
+                        </div>
+                    </div>`
+                )
+            }) 
+        } else clearCart();
+    });
+
+    // cart clear
+    $('.cart-clear').click(() => {
+        clearCart();
+    })
 
 })
+
+
+function getListProductFromLocalStorage() {
+    if (window.localStorage.getItem('carts')) {
+        const indexList = JSON.parse(window.localStorage.getItem('carts'));
+        let result = [];
+        for (let i = 0; i < indexList.length; i++) {
+            result.push({
+                ...products[indexList[i].categoryId].items[indexList[i].productId],
+                quantity: indexList[i].quantity
+            })
+        }
+        return result;
+    }
+    else return [];
+}
+
+function updateCartQuantity() {
+    if (window.localStorage.getItem('carts')) {
+        const indexList = JSON.parse(window.localStorage.getItem('carts'));
+        $('.menu-right__item.cart .cart-number').html('(' + indexList.length + ')');
+    }
+}
+
+function clearCart() {
+    window.localStorage.setItem('carts', JSON.stringify([]));
+    $('#cartModal .modal-body').html(`<div class="mt-5 mb-5" style="font-size: 14px;margin-left: 300px;">Chưa có gì trong giỏ hàng.</div>`);
+    updateCartQuantity();
+}
