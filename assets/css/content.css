@@ -48,6 +48,7 @@
     cursor: pointer;
     transition: ease-in 0.2s;
     position: relative;
+    margin-bottom: 24px;
 }
 
 .sub-content__body .body__item:hover {
@@ -76,6 +77,11 @@
 .sub-content__body .body__item .info .name {
     font-weight: 600;
     cursor: pointer;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 .sub-content__body .body__item .info .prices .price {
