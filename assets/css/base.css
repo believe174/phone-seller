@@ -93,6 +93,25 @@ html{
     color: red;
 }
 
+.cart-total {
+    display: flex;
+    align-items: flex-end;
+    font-size: 14px;
+    margin: 8px 14px 12px 0;
+}
+
+.total-title {
+    margin-left: auto;
+    margin-right: 10px;
+    margin-bottom: 5px;
+}
+
+.total-money {
+    font-size: 24px;
+    color: #FF6700;
+    font-weight: 600;
+}
+
 
 
 /* ANIMATION */

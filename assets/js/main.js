@@ -23,13 +23,13 @@ const products = [
                 name: 'iPhone 12 64GB Chính Hãng VN/A',
                 image:  './assets/img/phone/phone2.webp',
                 sale_price: '15.890.000 đ',
-                price: '20.490.000đ',
+                price: '20.490.000 đ',
                 discount: '22%'
             },
             {
                 name: 'iPhone 13 Pro Max 128GB Chính hãng VN/A',
                 image:  './assets/img/phone/phone3.webp',
-                price: '33.990.000đ',
+                price: '33.990.000 đ',
                 sale_price: '28.990.000 đ',
                 discount: '15%'
             },
@@ -43,7 +43,7 @@ const products = [
             {
                 name: 'Samsung Galaxy S22+ 8GB/128GB Chính hãng',
                 image:  './assets/img/phone/phone5.webp',
-                price: '21.990.000đ',
+                price: '21.990.000 đ',
                 sale_price: '20.290.000 đ',
                 discount: '8%'
             },
@@ -79,20 +79,20 @@ const products = [
                 name: 'iPhone 12 64GB Chính Hãng VN/A',
                 image:  './assets/img/phone/phone2.webp',
                 sale_price: '15.890.000 đ',
-                price: '20.490.000đ',
+                price: '20.490.000 đ',
                 discount: '8%'
             },
             {
                 name: 'iPhone 13 Pro Max 128GB Chính hãng VN/A',
                 image:  './assets/img/phone/phone3.webp',
-                price: '33.990.000đ',
+                price: '33.990.000 đ',
                 sale_price: '28.990.000 đ',
                 discount: '8%'
             },
             {
                 name: 'iPhone 13 Pro Max 128GB Chính hãng VN/A',
                 image:  './assets/img/phone/phone3.webp',
-                price: '33.990.000đ',
+                price: '33.990.000 đ',
                 sale_price: '28.990.000 đ',
                 discount: '8%'
             }
@@ -115,34 +115,34 @@ const products = [
                 name: 'Cable Sạc Nhanh DLINE L 1M Type C to Lightning 20W PD',
                 image:  './assets/img/part/part1.webp',
                 sale_price: '191.000 đ',
-                price: '350.000đ',
+                price: '350.000 đ',
                 discount: '46%'
             },
             {
                 name: 'Tai Nghe Không Dây BWOO DPOD PRO (BW44)',
                 image:  './assets/img/part/part2.webp',
                 sale_price: '499.000 đ',
-                price: '890.000đ',
+                price: '890.000 đ',
                 discount: '44%'
             },
             {
                 name: 'Tai Nghe Không Dây BWOO DPOD PRO (BW44)',
                 image:  './assets/img/part/part3.webp',
-                price: '590.000đ',
+                price: '590.000 đ',
                 sale_price: '490.000 đ',
                 discount: '17%'
             },
             {
                 name: 'Tai Nghe Bluetooth True Wireless Samsung Buds Live Chính Hãng',
                 image:  './assets/img/part/part4.webp',
-                price: '4.490.000đ',
+                price: '4.490.000 đ',
                 sale_price: '1.290.000 đ',
                 discount: '71%'
             },
             {
                 name: 'Tai Nghe Bluetooth AirPods Pro With Magsafe Charging Case',
                 image:  './assets/img/part/part5.webp',
-                price: '6.790.000đ',
+                price: '6.790.000 đ',
                 sale_price: '4.580.000 đ',
                 discount: '33%'
             },
@@ -172,20 +172,20 @@ const products = [
                 name: 'Laptop LG gram 2021 17ZD90P-G.AX71A5 17 inch',
                 image:  './assets/img/laptop/laptop1.webp',
                 sale_price: '28.490.000 đ',
-                price: '44.890.000đ',
+                price: '44.890.000 đ',
                 discount: '37%'
             },
             {
                 name: 'Laptop LG gram 2021 16Z90P-G.AH73A5 16 inch',
                 image:  './assets/img/laptop/laptop2.webp',
                 sale_price: '40.600.000 đ',
-                price: '48.890.000đ',
+                price: '48.890.000 đ',
                 discount: '17%'
             },
             {
                 name: 'Laptop LG gram 2021 16ZD90P-G.AX54A5 16 inch',
                 image:  './assets/img/laptop/laptop3.webp',
-                price: '39.890.000đ',
+                price: '39.890.000 đ',
                 sale_price: '23.990.000 đ',
                 discount: '40%'
             },
@@ -193,22 +193,79 @@ const products = [
                 name: 'Laptop LG gram 2021 17ZD90P-G.AX71A5 17 inch',
                 image:  './assets/img/laptop/laptop1.webp',
                 sale_price: '28.490.000 đ',
-                price: '44.890.000đ',
+                price: '44.890.000 đ',
                 discount: '37%'
             },
             {
                 name: 'Laptop LG gram 2021 16Z90P-G.AH73A5 16 inch',
                 image:  './assets/img/laptop/laptop2.webp',
                 sale_price: '40.600.000 đ',
-                price: '48.890.000đ',
+                price: '48.890.000 đ',
                 discount: '17%'
             },
             {
                 name: 'Laptop LG gram 2021 16ZD90P-G.AX54A5 16 inch',
                 image:  './assets/img/laptop/laptop3.webp',
-                price: '39.890.000đ',
+                price: '39.890.000 đ',
                 sale_price: '23.990.000 đ',
                 discount: '40%'
+            },
+        ]
+    },
+    {
+        type: 'watches',
+        headers: {
+            icon: './assets/img/watch/icon.svg',
+            title: 'ĐỒNG HỒ ĐÁNG MUA NHẤT',
+            menu: {
+                items: [
+                    'Apple Watch Series 7', 'Apple Watch Series 6', 'Apple Watch SE'
+                ],
+                more_text: 'Xem tất cả 33 Đồng hồ thông minh'
+            }
+        },
+        items: [
+            {
+                name: 'Vòng đeo tay thông minh Xiaomi Mi Band 6 - Chính hãng',
+                image:  './assets/img/watch/watch1.webp',
+                sale_price: '990.000 đ',
+                price: '1.290.000 đ',
+                discount: '23%'
+            },
+            {
+                name: 'Apple Watch Series 7 45mm GPS Viền nhôm dây cao su đã kích hoạt | Chính hãng VN/A',
+                image:  './assets/img/watch/watch2.webp',
+                sale_price: '8.100.000 đ',
+                price: '8.900.000 đ',
+                discount: '10%'
+            },
+            {
+                name: 'Apple Watch Series 6 40mm GPS - Viền nhôm dây cao su – Chính hãng VN/A',
+                image:  './assets/img/watch/watch3.webp',
+                price: '12.590.000 đ',
+                sale_price: '7.350.000 đ',
+                discount: '42%'
+            },
+            {
+                name: 'Apple Watch Series 7 45mm GPS Viền nhôm dây cao su | Chính hãng VN/A',
+                image:  './assets/img/watch/watch4.webp',
+                sale_price: '10.700.000 đ',
+                price: '11.290.000 đ',
+                discount: '5%'
+            },
+            {
+                name: 'Apple Watch Series 7 41mm GPS Viền nhôm dây cao su | Chính hãng VN/A',
+                image:  './assets/img/watch/watch5.webp',
+                sale_price: '9.350.000 đ',
+                price: '10.990.000 đ',
+                discount: '17%'
+            },
+            {
+                name: 'Vòng đeo tay thông minh Xiaomi Mi Band 6 - Chính hãng',
+                image:  './assets/img/watch/watch1.webp',
+                sale_price: '990.000 đ',
+                price: '1.290.000 đ',
+                discount: '23%'
             },
         ]
     }
@@ -218,9 +275,106 @@ const products = [
 
 $(document).ready(function() {
 
-    let cart = getListProductFromLocalStorage();
+    // let cart = getListProductFromLocalStorage();
     updateCartQuantity();
+    let productListAppeared = Object.assign([], products);
+    renderProductListAppeared(productListAppeared);
+    
 
+
+    //add item into cart
+    document.querySelectorAll('.body__item').forEach((element) => {
+        element.addEventListener('click',(function() {
+            const productId = element.attributes.index.value;
+            const categoryId = element.parentElement.parentElement.parentElement.parentElement.attributes.index.value;
+
+            tempCart = localStorage.getItem('carts') ? JSON.parse(localStorage.getItem('carts')) : [];
+            if (tempCart.length) {
+                let alreadyAdded = false;
+                for (let i = 0; i < tempCart.length; i++) {
+                    if (tempCart[i].productId == productId && tempCart[i].categoryId == categoryId) {
+                        tempCart[i].quantity += 1;
+                        alreadyAdded = true;
+                    }
+                }
+                if (!alreadyAdded) {
+                    tempCart.push({
+                        productId,
+                        categoryId,
+                        quantity: 1
+                    });
+                }
+            } else {
+                tempCart.push({
+                    productId,
+                    categoryId,
+                    quantity: 1
+                });
+            }
+
+            window.localStorage.setItem('carts', JSON.stringify(tempCart));
+            updateCartQuantity();
+
+        }));
+    })
+
+    //open cart
+    $('.menu-right__item.cart').click(() => {
+        const cartList = getListProductFromLocalStorage();
+        let totalPayment = 0;
+        if (cartList.length) {
+            $('#cartModal .modal-body').html('');
+            $('#cartModal .cart-total').html('');
+            cartList.forEach(product => {
+                $('#cartModal .modal-body').append(`
+                    <div class="cart-item mb-3 mt-3">
+                        <div class="cart-item__img" style="background-image: url(${product.image})"></div>
+                        <div class="cart-item__name ms-5 me-4">${product.name}</div>
+                        <div class="cart-item__price ms-5 me-4">${product.price}</div>
+                        <div class="cart-item__sale-price ms-5 me-4">${product.sale_price} (${product.discount})</div>
+                        <div class="cart-item__quantity ms-5 me-4">SL: ${product.quantity}</div>
+                        <div class="cart-item__delete-btn btn">
+                            <i class="fa-solid fa-xmark"></i>
+                        </div>
+                    </div>`
+                )
+                
+                totalPayment += getPriceFromPriceText(product.sale_price) * product.quantity;
+            }) 
+
+            $('#cartModal .modal-body').after(`
+                <div class="cart-total">
+                    <span class="total-title">Tổng giá trị đơn hàng: </span>
+                    <span class="total-money">${getMoneyFormatFromPrice(totalPayment)}</span>
+                </div>
+            `)
+        } else clearCart();
+    });
+
+    // cart clear
+    $('.cart-clear').click(() => {
+        clearCart();
+    })
+
+    //search
+    $('.search-btn').click(() => {
+        let productList = [];
+        for(let i = 0; i < products.length; i++) {
+            productList[i] = Object.assign({}, products[i]);
+        }
+        const keyWord = $('input[name=keyWordSearch]').val();
+        if (keyWord) {
+            for(let i = 0; i < productList.length; i++) {
+                productList[i].items = productList[i].items.filter(item => item.name.toUpperCase().includes(keyWord.toUpperCase()));
+            }
+        }
+        renderProductListAppeared(productList);
+    })
+
+})
+
+function renderProductListAppeared(products) {
+    $('#content').html('');
     products.forEach((product, index) => {
 
         $('#content').append(`
@@ -295,72 +449,7 @@ $(document).ready(function() {
         });
 
     })
-
-
-    //add item into cart
-    document.querySelectorAll('.body__item').forEach((element) => {
-        element.addEventListener('click',(function() {
-            const productId = element.attributes.index.value;
-            const categoryId = element.parentElement.parentElement.parentElement.parentElement.attributes.index.value;
-
-            tempCart = localStorage.getItem('carts') ? JSON.parse(localStorage.getItem('carts')) : [];
-            if (tempCart.length) {
-                let alreadyAdded = false;
-                for (let i = 0; i < tempCart.length; i++) {
-                    if (tempCart[i].productId == productId && tempCart[i].categoryId == categoryId) {
-                        tempCart[i].quantity += 1;
-                        alreadyAdded = true;
-                    }
-                }
-                if (!alreadyAdded) {
-                    tempCart.push({
-                        productId,
-                        categoryId,
-                        quantity: 1
-                    });
-                }
-            } else {
-                tempCart.push({
-                    productId,
-                    categoryId,
-                    quantity: 1
-                });
-            }
-
-            window.localStorage.setItem('carts', JSON.stringify(tempCart));
-            updateCartQuantity();
-
-        }));
-    })
-
-    //open cart
-    $('.menu-right__item.cart').click(() => {
-        const cartList = getListProductFromLocalStorage();
-        if (cartList.length) {
-            $('#cartModal .modal-body').html('');
-            cartList.forEach(product => {
-                $('#cartModal .modal-body').append(`
-                    <div class="cart-item mb-3 mt-3">
-                        <div class="cart-item__img" style="background-image: url(${product.image})"></div>
-                        <div class="cart-item__name ms-5 me-4">${product.name}</div>
-                        <div class="cart-item__price ms-5 me-4">${product.price}</div>
-                        <div class="cart-item__sale-price ms-5 me-4">${product.sale_price} (${product.discount})</div>
-                        <div class="cart-item__quantity ms-5 me-4">SL: ${product.quantity}</div>
-                        <div class="cart-item__delete-btn btn">
-                            <i class="fa-solid fa-xmark"></i>
-                        </div>
-                    </div>`
-                )
-            }) 
-        } else clearCart();
-    });
-
-    // cart clear
-    $('.cart-clear').click(() => {
-        clearCart();
-    })
-
-})
+}
 
 
 function getListProductFromLocalStorage() {
@@ -378,6 +467,21 @@ function getListProductFromLocalStorage() {
     else return [];
 }
 
+function getPriceFromPriceText(priceText) {
+    let price = priceText.replace(' đ','');
+    while (price.indexOf('.') > -1) {
+        price = price.replace('.', '');
+    }
+    return Number.parseInt(price);
+}
+
+function getMoneyFormatFromPrice(price) {
+    return price.toLocaleString('en-US', {
+        style: 'currency',
+        currency: 'VND'
+    });
+}
+
 function updateCartQuantity() {
     if (window.localStorage.getItem('carts')) {
         const indexList = JSON.parse(window.localStorage.getItem('carts'));
@@ -388,5 +492,6 @@ function updateCartQuantity() {
 function clearCart() {
     window.localStorage.setItem('carts', JSON.stringify([]));
     $('#cartModal .modal-body').html(`<div class="mt-5 mb-5" style="font-size: 14px;margin-left: 300px;">Chưa có gì trong giỏ hàng.</div>`);
+    $('#cartModal .cart-total').html('');
     updateCartQuantity();
 }
