@@ -280,8 +280,6 @@ $(document).ready(function() {
     let productListAppeared = Object.assign([], products);
     renderProductListAppeared(productListAppeared);
     
-
-
     //add item into cart
     document.querySelectorAll('.body__item').forEach((element) => {
         element.addEventListener('click',(function() {
@@ -320,41 +318,13 @@ $(document).ready(function() {
 
     //open cart
     $('.menu-right__item.cart').click(() => {
-        const cartList = getListProductFromLocalStorage();
-        let totalPayment = 0;
-        if (cartList.length) {
-            $('#cartModal .modal-body').html('');
-            $('#cartModal .cart-total').html('');
-            cartList.forEach(product => {
-                $('#cartModal .modal-body').append(`
-                    <div class="cart-item mb-3 mt-3">
-                        <div class="cart-item__img" style="background-image: url(${product.image})"></div>
-                        <div class="cart-item__name ms-5 me-4">${product.name}</div>
-                        <div class="cart-item__price ms-5 me-4">${product.price}</div>
-                        <div class="cart-item__sale-price ms-5 me-4">${product.sale_price} (${product.discount})</div>
-                        <div class="cart-item__quantity ms-5 me-4">SL: ${product.quantity}</div>
-                        <div class="cart-item__delete-btn btn">
-                            <i class="fa-solid fa-xmark"></i>
-                        </div>
-                    </div>`
-                )
-                
-                totalPayment += getPriceFromPriceText(product.sale_price) * product.quantity;
-            }) 
-
-            $('#cartModal .modal-body').after(`
-                <div class="cart-total">
-                    <span class="total-title">Tổng giá trị đơn hàng: </span>
-                    <span class="total-money">${getMoneyFormatFromPrice(totalPayment)}</span>
-                </div>
-            `)
-        } else clearCart();
+        renderCart();
     });
 
     // cart clear
     $('.cart-clear').click(() => {
         clearCart();
-    })
+    });
 
     //search
     $('.search-btn').click(() => {
@@ -369,8 +339,9 @@ $(document).ready(function() {
             }
         }
         renderProductListAppeared(productList);
-    })
+    });
 
+    
 })
 
 function renderProductListAppeared(products) {
@@ -451,6 +422,37 @@ function renderProductListAppeared(products) {
     })
 }
 
+function renderCart() {
+    const cartList = getListProductFromLocalStorage();
+    let totalPayment = 0;
+    if (cartList.length) {
+        $('#cartModal .modal-body').html('');
+        $('#cartModal .cart-total').html('');
+        cartList.forEach((product, index) => {
+            $('#cartModal .modal-body').append(`
+                <div class="cart-item mb-3 mt-3">
+                    <div class="cart-item__img" style="background-image: url(${product.image})"></div>
+                    <div class="cart-item__name ms-5 me-4">${product.name}</div>
+                    <div class="cart-item__price ms-5 me-4">${product.price}</div>
+                    <div class="cart-item__sale-price ms-5 me-4">${product.sale_price} (${product.discount})</div>
+                    <div class="cart-item__quantity ms-5 me-4">SL: ${product.quantity}</div>
+                    <button class="cart-item__delete-btn btn" onclick="removeFromCart(${index}, this)">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>`
+            )
+            
+            totalPayment += getPriceFromPriceText(product.sale_price) * product.quantity;
+        }) 
+
+        $('#cartModal .modal-body').after(`
+            <div class="cart-total">
+                <span class="total-title">Tổng giá trị đơn hàng: </span>
+                <span class="total-money">${getMoneyFormatFromPrice(totalPayment)}</span>
+            </div>
+        `)
+    } else clearCart();
+}
 
 function getListProductFromLocalStorage() {
     if (window.localStorage.getItem('carts')) {
@@ -492,6 +494,19 @@ function updateCartQuantity() {
 function clearCart() {
     window.localStorage.setItem('carts', JSON.stringify([]));
     $('#cartModal .modal-body').html(`<div class="mt-5 mb-5" style="font-size: 14px;margin-left: 300px;">Chưa có gì trong giỏ hàng.</div>`);
-    $('#cartModal .cart-total').html('');
+    $('#cartModal .cart-total').remove();
     updateCartQuantity();
+}
+
+function removeFromCart(index, el) {
+    let cartList = JSON.parse(window.localStorage.getItem('carts'));
+    if (cartList.length === 1) {
+        clearCart();
+        updateCartQuantity();
+    } else {
+        cartList.splice(index, 1);
+        window.localStorage.setItem('carts', JSON.stringify(cartList));
+        renderCart();
+        updateCartQuantity();
+    }
 }
